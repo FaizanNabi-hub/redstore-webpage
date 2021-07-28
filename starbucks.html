@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Star bucks Website Landing Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+	<section>
+		<div class="circle"></div>
+		<header>
+			<a href="#"><img src="images-starbucks/logo.png" class="logo"></a>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Menu</a></li>
+				<li><a href="#">What's New</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<img src="images-starbucks/moon.png" id="icon">
+		</header>
+		<div class="content">
+			<div class="textBox">
+				<h2>It's not just Coffee<br>It's <span>StarBucks</span></h2>
+				<p>Starbucks was founded by Jerry Baldwin, Gordon Bowker, and Zev Siegl,<br> opening its first store in 1971 near the historic Pike Place Market in Seattle.... <br>
+				<br>By the early 1980s, Starbucks had opened four stores in Seattle that stood out from the competitors with their top-quality fresh-roasted coffees.</p>
+				<a href="#">Learn More</a>
+			</div>
+			<div class="imgBox">
+				<img src="images-starbucks/img 1.png" class="Starbucks">
+			</div>
+		</div>
+		<ul class="thumb">
+			<li><img src="images-starbucks/thumb1.png" onclick="imgSlider('images-starbucks/img 1.png');changeCircleColor('#017143')"></li>
+			<li><img src="images-starbucks/thumb2.png" onclick="imgSlider('images-starbucks/img 2.png');changeCircleColor('#eb7495')"></li>
+			<li><img src="images-starbucks/thumb3.png" onclick="imgSlider('images-starbucks/img 3.png');changeCircleColor('#d752b1')"></li>
+		</ul>
+		<ul class="sci">
+			<li><a href="#"><img src="images-starbucks/facebook.png"></li></a>
+			<li><a href="#"><img src="images-starbucks/twitter.png"></li></a>
+			<li><a href="#"><img src="images-starbucks/instagram.png"></li></a>
+		</ul>
+	</section>
+
+	<script type="text/javascript">
+		function imgSlider(anything){
+			document.querySelector('.Starbucks').src = anything;
+		}
+		function changeCircleColor(color){
+			const circle = document.querySelector('.circle');
+			circle.style.background = color;
+		}
+
+		var icon = document.getElementById("icon");
+
+		icon.onclick = function(){
+			document.body.classList.toggle("dark-theme");
+			if(document.body.classList.contains("dark-theme")){
+				icon.src = "images-starbucks/sun.png"
+			}else{
+				icon.src = "images-starbucks/moon.png"
+			}
+		}
+	</script>
+</body>
+</html>
