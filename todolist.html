@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TO DO LIST APP</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/LetsGrowProjects/todolist.css">
+    <link rel="icon" href="/LetsGrowProjects/assets/it's Dexter's.png">
+
+</head>
+<body>
+    <div class="background-image">
+        <img src="/LetsGrowProjects/assets/welcome faizan,.png">
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                MY TO <span>DO LIST</span>
+            </div>
+            <div class="theme">
+                <img src="/LetsGrowProjects/assets/icon-sun.svg">
+            </div>
+        </div>
+    
+        <div class="new-to-do" >
+            <div class="new-todo-input">
+                <form autocomplete="off">
+                    <input id="name" type="text" placeholder="Create a new to do...">
+                </form>
+            </div>
+            <input type="button" id="btnClick" onclick="addMore(event)" value="ADD-TASK">
+        </div>
+        <div class="error-section">
+           <span id="error"></span>
+        </div>
+        
+        <div class="items" id="list">
+        
+        </div>
+        
+    </div>
+    
+    <script src="/LetsGrowProjects/todolist.js"></script>
+</body>
+</html>
